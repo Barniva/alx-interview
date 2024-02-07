@@ -32,9 +32,9 @@ This will generate the first 5 rows of Pascal's Triangle. 🎯
 
 Contributions, issues, and feature requests are welcome! Let's make this project better together. 💪
 
-## 📄 License 📄
+## 📄 License
 
-[MIT](https://choosealicense.com/licenses/mit/)
-```
+This project is under the MIT License. For details, see MIT License.
+
 
 Feel free to modify this to better suit your project's needs. Enjoy coding! 💻
