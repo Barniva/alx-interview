@@ -1,6 +1,4 @@
-Sure, here's a README file for your project with some emojis for a fun touch:
 
-```markdown
 # Minimum Operations Challenge 🚀
 
 In this project, we have a single character 'H' in a text file. The text editor can execute only two operations in this file: Copy All and Paste. The challenge is to write a method that calculates the fewest number of operations needed to result in exactly 'n' H characters in the file.
