@@ -1,15 +1,15 @@
 
 # ALX Interview Preparation :rocket:
 ![ALX logo](https://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png)
-> Your one-stop solution for acing your next interview!
+> Your gateway to mastering crucial interview questions! :trophy:
 
 ## Overview :book:
 This repository is your go-to resource for interview preparation. Here's what you can expect:
 
-* **Whiteboard Challenges**: Practice your problem-solving skills with real-world coding challenges.
-* **Data Structures**: Learn and understand various data structures and their applications.
-* **Time Complexity and Big O Notation**: Get a grip on assessing the efficiency of your code.
-* **Searching and Sorting Algorithms**: Dive deep into classic algorithms that are frequently asked in interviews.
+* **Whiteboard Challenges**: Practice makes perfect! Hone your problem-solving skills with real-world coding challenges. :pencil2:
+* **Data Structures**: Knowledge is power! Learn and understand various data structures and their applications. :brain:
+* **Time Complexity and Big O Notation**: Efficiency matters! Get a grip on assessing the efficiency of your code. :hourglass_flowing_sand:
+* **Searching and Sorting Algorithms**: Dive deep! Explore classic algorithms that are frequently asked in interviews. :diving_mask:
 
 ## Technologies & Tools :wrench:
 
@@ -21,9 +21,7 @@ This repository is your go-to resource for interview preparation. Here's what yo
 ---
 
 ## Maintainer :man_technologist:
-* **Barnabas Endashaw** (@Barniva) - [<img src="https://img.shields.io/badge/Portfolio-20d6fe.svg?&style=plastic"/>](https://barniva.github.io/)
-  [<img src="https://img.shields.io/badge/Twitter-1DA1F2.svg?&style=plastic&logo=twitter&logoColor=white"/>](https://twitter.com/BarnabasEndashaw)
-  [<img src="https://img.shields.io/badge/Linkedin-0A66C2.svg?&style=plastic&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/barnabas-endashaw/)
+* **Barnabas Endashaw** (@Barniva) -
   [<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=plastic&logo=github&logoColor=white"/>](https://github.com/Barniva)
 
 Feel free to contribute, and happy coding! :rocket: :smile:
