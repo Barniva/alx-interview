@@ -21,6 +21,6 @@ This repository is your go-to resource for interview preparation. Here's what yo
 ---
 
 ## Maintainer :man_technologist:
-* **Barnabas Endashaw** (@Barniva) - [<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=plastic&logo=github&logoColor=white"/>](https://github.com/Barniva)
-
+* **Barnabas Endashaw** (@Barniva)
+  
 Feel free to contribute, and happy coding! :rocket: :smile:
