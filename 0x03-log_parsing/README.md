@@ -1,61 +1,30 @@
 
-# Log Parsing Script
+# Log Parsing Script :page_with_curl:
 
-This script reads stdin line by line and computes metrics.
+This repository contains a Python script that reads stdin line by line and computes metrics. :bar_chart:
 
-## Input Format
+## Description :book:
 
-The input format is as follows:
-
-```
-<IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>
-```
-
-If the format is not this one, the line will be skipped.
-
-## Output
+The script takes an input in the following format: `<IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>`. If the format is not this one, the line is skipped.
 
 After every 10 lines and/or a keyboard interruption (CTRL + C), the script prints these statistics from the beginning:
+- Total file size: File size: `<total size>` where `<total size>` is the sum of all previous `<file size>` (see input format above)
+- Number of lines by status code: possible status code: 200, 301, 400, 401, 403, 404, 405 and 500. If a status code doesn’t appear or is not an integer, the script doesn't print anything for this status code. The format is: `<status code>: <number>`. Status codes are printed in ascending order.
 
-- Total file size: File size: `<total size>`, where `<total size>` is the sum of all previous `<file size>` (see input format above)
-- Number of lines by status code: possible status codes are 200, 301, 400, 401, 403, 404, 405, and 500. If a status code doesn’t appear or is not an integer, the script doesn't print anything for this status code. The format is `<status code>: <number>`. Status codes are printed in ascending order.
+:warning: In this sample, you will have random value - it’s normal to not have the same output as this one.
 
-## Warning
+## Usage :computer:
 
-In this sample, you will have random values - it’s normal to not have the same output as this one.
-
-## Usage
-
-You can use the script as follows:
+Run the generator script and pipe its output to the stats script:
 
 ```bash
-alexa@ubuntu:~/0x03-log_parsing$ cat 0-generator.py | ./0-stats.py 
+./0-generator.py | ./0-stats.py 
 ```
 
-## Repository
+## Repository Info :file_folder:
 
 - GitHub repository: alx-interview
 - Directory: 0x03-log_parsing
-- File: 0-stats.py
+- Main File: 0-stats.py
 
-## Your Answer
-
-Your answer is a Python script that generates random logs and writes them to stdout:
-
-```python
-#!/usr/bin/python3
-import random
-import sys
-from time import sleep
-import datetime
-
-for i in range(10000):
-    sleep(random.random())
-    sys.stdout.write("{:d}.{:d}.{:d}.{:d} - [{}] \"GET /projects/260 HTTP/1.1\" {} {}\n".format(
-        random.randint(1, 255), random.randint(1, 255), random.randint(1, 255), random.randint(1, 255),
-        datetime.datetime.now(),
-        random.choice([200, 301, 400, 401, 403, 404, 405, 500]),
-        random.randint(1, 1024)
-    ))
-    sys.stdout.flush()
-
+Enjoy using the script! :smile:
