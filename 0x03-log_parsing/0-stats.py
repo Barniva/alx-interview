@@ -1,55 +1,49 @@
 #!/usr/bin/python3
-"""
-A script: Reads standard input line by line and computes metrics
-"""
+# This is a script that reads stdin line by line and computes metrics
 
+import sys
 
-def parseLogs():
-    """
-    Reads logs from standard input and generates reports
-    Reports:
-        * Prints log size after reading every 10 lines & at KeyboardInterrupt
-    Raises:
-        KeyboardInterrupt (Exception): handles this exception and raises it
-    """
-    stdin = __import__('sys').stdin
-    lineNumber = 0
-    fileSize = 0
-    statusCodes = {}
-    codes = ('200', '301', '400', '401', '403', '404', '405', '500')
-    try:
-        for line in stdin:
-            lineNumber += 1
-            line = line.split()
-            try:
-                fileSize += int(line[-1])
-                if line[-2] in codes:
-                    try:
-                        statusCodes[line[-2]] += 1
-                    except KeyError:
-                        statusCodes[line[-2]] = 1
-            except (IndexError, ValueError):
-                pass
-            if lineNumber == 10:
-                report(fileSize, statusCodes)
-                lineNumber = 0
-        report(fileSize, statusCodes)
-    except KeyboardInterrupt as e:
-        report(fileSize, statusCodes)
-        raise
+# We initialize a dictionary to keep track of the status codes and their counts
+status_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
+cache = {code: 0 for code in status_codes}
 
+# We also initialize variables to keep track of the total file size and the line counter
+total_size = 0
+counter = 0
 
-def report(fileSize, statusCodes):
-    """
-    Prints generated report to standard output
-    Args:
-        fileSize (int): total log size after every 10 successfully read line
-        statusCodes (dict): dictionary of status codes and counts
-    """
-    print("File size: {}".format(fileSize))
-    for key, value in sorted(statusCodes.items()):
-        print("{}: {}".format(key, value))
+try:
+    # We read from stdin line by line
+    for line in sys.stdin:
+        # We split the line into a list of words
+        line_list = line.split(" ")
+        # If the line does not contain at least 7 words, we skip it
+        if len(line_list) < 7:
+            continue
+        # We extract the size and the status code from the line
+        size = line_list[-1]
+        code = line_list[-2]
+        # If the status code is in our cache, we increment its count and add the size to the total size
+        if code in cache:
+            cache[code] += 1
+            total_size += int(size)
+            counter += 1
 
+        # After every 10 lines, we print the statistics
+        if counter == 10:
+            print("File size: {}".format(total_size))
+            for code in sorted(cache.keys()):
+                if cache[code] > 0:
+                    print("{}: {}".format(code, cache[code]))
+            counter = 0
 
-if __name__ == '__main__':
-    parseLogs()
+# We handle keyboard interruptions gracefully
+except KeyboardInterrupt:
+    pass
+
+# Finally, we print the statistics one last time
+finally:
+    print("File size: {}".format(total_size))
+    for code in sorted(cache.keys()):
+        if cache[code] > 0:
+            print("{}: {}".format(code, cache[code]))
+
