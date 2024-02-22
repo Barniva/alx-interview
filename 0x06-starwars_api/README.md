@@ -49,6 +49,6 @@ Bib Fortuna
 - Directory: `0x06-starwars_api`
 - File: `0-starwars_characters.js`
 
-May the force be with you! 🚀
+Embark on your galactic adventure! 🌠
 
 
