@@ -1,4 +1,3 @@
-
 # ALX Interview Preparation :rocket:
 ![ALX logo](https://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png)
 > Your gateway to mastering crucial interview questions! :trophy:
