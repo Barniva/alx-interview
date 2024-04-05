@@ -3,6 +3,7 @@
 ![ALX logo](https://www.alxafrica.com/wp-content/uploads/2022/01/header-logo.png)
 > Your gateway to mastering crucial interview questions! :trophy:
 
+
 ## Overview :book:
 This repository is your go-to resource for interview preparation. Here's what you can expect:
 
@@ -10,6 +11,7 @@ This repository is your go-to resource for interview preparation. Here's what yo
 * **Data Structures**: Knowledge is power! Learn and understand various data structures and their applications. :brain:
 * **Time Complexity and Big O Notation**: Efficiency matters! Get a grip on assessing the efficiency of your code. :hourglass_flowing_sand:
 * **Searching and Sorting Algorithms**: Dive deep! Explore classic algorithms that are frequently asked in interviews. :diving_mask:
+
 
 ## Technologies & Tools :wrench:
 
